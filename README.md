@@ -1,5 +1,5 @@
 # SteamGameChooser
-Script to randomly select a game from the user's Steam library, written in PowerShell because I'm too lazy to use a real language at the moment. Well, it works.
+Script to randomly select a game from the user's Steam library, written in PowerShell because I'm too lazy to use a real language at the moment (tested/developed with Powershell 4.0, miiiight not work with earlier versions because of new syntax and such?). Well, it works, albeit it's a bit slow. chooser.ps1 is the main file you want to actually run.
 
 Currently, this just displays the game in the command line, as well as info. Ideally there'd be a GUI, as well as a button to actually launch the game.
 
