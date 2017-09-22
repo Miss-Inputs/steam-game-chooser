@@ -1,5 +1,6 @@
-﻿import-module (join-path (split-path -parent $Script:PSCommandPath) steam_games.ps1)
-import-module (join-path (split-path -parent $Script:PSCommandPath) non_steam_games.ps1)
+﻿import-module (join-path $PSScriptRoot steam_games)
+import-module (join-path $PSScriptRoot non_steam_games)
+
 
 function get_all_games($userid){
     $lib_list_path = get_library_list_path
@@ -45,7 +46,7 @@ function main($userid){
     } elseif ($game.game_type -eq 'non_steam'){
         write-host "Go play $($game.AppName)"
     }
-    display_game_info $userid
+    display_game_info $game
 }
 
 #TODO: Add a command line parameter or prompt user or something for user id
